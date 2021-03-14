@@ -19,7 +19,6 @@ class _TodoPageState extends State<TodoPage> {
   TodoBloc _todoBloc;
   TodoBottomBarBloc _todoBottomBarBloc;
   PageController _pageController = PageController();
-  bool _pageViewAutoUpdated = false;
 
   @override
   void initState() {
@@ -75,10 +74,6 @@ class _TodoPageState extends State<TodoPage> {
   }
 
   _pageViewChanged(int value) {
-    if (!_pageViewAutoUpdated) {
-      _pageViewAutoUpdated = _todoBottomBarBloc.state.index == value;
-      return;
-    }
     TodoBottomBarEvent event;
     if (value == TodoBottomBar.completed) {
       event = TodoBottomBarEventCompleted();
@@ -87,16 +82,13 @@ class _TodoPageState extends State<TodoPage> {
     } else {
       event = TodoBottomBarEventAll();
     }
-    // Focus correct bottom bar
     _todoBottomBarBloc.add(event);
   }
 
   _setUpBottomBarChanged() {
     // Active page view by bottom bar index
     _todoBottomBarBloc.listen((TodoBottomBarState state) {
-      _pageViewAutoUpdated = false;
-      _pageController.animateToPage(state.index,
-          duration: Duration(milliseconds: 500), curve: Curves.ease);
+      _pageController.jumpToPage(state.index);
     });
   }
 }

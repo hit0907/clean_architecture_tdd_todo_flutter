@@ -1,18 +1,36 @@
 # clean_architecture_tdd_todo_flutter
 
-TDD Clean Architecture for Flutter Todo App.
+A Flutter Todo App for Android, IOS, Web, Desktop. Built using [Flutter](https://flutter.dev).
 
-## Getting Started
+This project follow by TDD Clean Architecture.
 
-This project is a starting point for a Flutter application.
+This project created for challenge test code. So that missing remote datasources and so on.
 
-A few resources to get you started if this is your first Flutter project:
+Thanks for best practice from [Reso Coder](https://github.com/ResoCoder).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## How to run
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
-## How to build
+#### Step 1: Install [Flutter](https://flutter.dev/docs/get-started/install)
+
+
+#### Step 2: Clone and run project
+
+```
+git clone https://github.com/hit0907/clean_architecture_tdd_todo_flutter.git
+
+cd clean_architecture_tdd_todo_flutter
+
+# get project packages
+flutter pub get
+
+# debug on web or connected devices
+flutter run -d chrome
+
+
+```
+
+
+## Resources
+- [The Flutter and BLoC Pattern Guide](https://github.com/devonfw-forge/devonfw4flutter)
+- [Flutter TDD Clean Architecture Course](https://resocoder.com/flutter-clean-architecture-tdd/)

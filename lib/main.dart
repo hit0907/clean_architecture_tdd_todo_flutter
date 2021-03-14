@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:clean_architecture_tdd_todo_flutter/features/todo/presentation/pages/todo_page.dart';
 import 'injection_container.dart' as di;
+import 'bloc_observer.dart' as bloc;
 
 void main() {
+  // Bloc event loging
+  bloc.traceEnable();
+
+  // Setup di
   di.setup();
+
+  // Start app
   runApp(MyApp());
 }
 
