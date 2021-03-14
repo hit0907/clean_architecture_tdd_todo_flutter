@@ -27,6 +27,8 @@ flutter pub get
 # debug on web or connected devices
 flutter run -d chrome
 
+# unit test
+flutter test
 
 ```
 
