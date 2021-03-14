@@ -1,0 +1,12 @@
+[
+    {
+        "text": "Todo incompleted",
+        "completed": false,
+        "creator": "admin"
+    },
+    {
+        "text": "Todo completed",
+        "completed": true,
+        "creator": "admin"
+    }
+]
